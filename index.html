@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>month</title>
+    <script src="./vue.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="app">
+       <div id="box">
+
+       </div>
+    </div>
+    <script>
+
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    year: null,
+                    month: null,
+                    day: null
+                }
+            },
+            methods: {
+                initDate() {
+                    this.year = new Date().getFullYear();
+                    this.month = new Date().getMonth() + 1;
+                    this.day = new Date().getDay();
+                }
+            },
+            computed: {
+
+            },
+            created() {
+                this.initDate()
+            }
+        })
+    </script>
+</body>
+
+</html>
